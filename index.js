@@ -58,7 +58,7 @@ app.post('/', function(req, response) {
 				maps.directions("Raleigh", keywordArray[i + 1]);
 			}
 			else if(keywordArray[i] == 'weather') {
-				console("Calling weather.getWeater");
+				console.log("Calling weather.getWeather");
 				weather.getWeather(req.body.text);
 			}
 		}	
