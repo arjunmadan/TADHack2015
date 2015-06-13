@@ -47,7 +47,7 @@ app.post('/', function(req, response) {
   		if (err) throw err;
 		keywords = res.keywords;
 		for(i in res.keywords) {
-			console.log(i);
+			console.log(keywords[i]['text']);
 		}
 		console.log(res.keywords);
 	});
