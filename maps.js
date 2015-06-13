@@ -13,6 +13,10 @@ function directions(origin, destination) {
 	request(url+query, function(error, response, body) {
   		console.log(body);
   		//TO-DO: parse information and return to user.
+  		for(i = 0; i < test['routes'][0]['legs'][0]['steps'].length; i++)
+		{
+			console.log(test['routes'][0]['legs'][0]['steps'][i]['html_instructions'] + " for " + test['routes'][0]['legs'][0]['steps'][i]['distance']['text']);
+		}
   	});
 	
 }
