@@ -10,7 +10,9 @@
     "express": "~4.9.x",
     "alchemy-api": "*",
     "consolidate": "*",
-    "dustjs-linkedin": "*"
+    "dustjs-linkedin": "*",
+    "http": "*",
+    "googlemaps": "*"
   },
   "engines": {
     "node": "0.12.2"
