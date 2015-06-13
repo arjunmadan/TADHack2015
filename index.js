@@ -7,17 +7,17 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
-	alchemy.concepts('Weather in Raleigh', {}, function(err, response) {
+	var concepts;
+	alchemy.concepts('Weather in Raleigh', {}, function(err, res) {
   		if (err) throw err;
 
 
 		// See http://www.alchemyapi.com/api/concept/htmlc.html for format of returned object
-		var concepts = response.concepts;
-		response.send(concepts);
+		concepts = response.concepts;
 		console.log(concepts);
   
 });
-
+	response.send(concepts);
   
 });
 
