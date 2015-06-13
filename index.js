@@ -45,5 +45,5 @@ app.listen(app.get('port'), function() {
 app.post('/', function(req, response) {
 	console.log(typeof(req));
 
-	console.log("Message received: " + req.body);
+	console.log("Message received: " + req.body.text);
 });
