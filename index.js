@@ -54,7 +54,7 @@ app.post('/', function(req, response) {
 			console.log(i);
 			console.log(keywordArray[i]);
 			if(keywordArray[i] == 'directions') {
-				console("Calling maps.directions");
+				console.log("Calling maps.directions");
 				maps.directions("Raleigh", keywordArray[i + 1]);
 			}
 			else if(keywordArray[i] == 'weather') {
