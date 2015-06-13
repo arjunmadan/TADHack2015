@@ -42,17 +42,26 @@ app.listen(app.get('port'), function() {
 
 app.post('/', function(req, response) {
 	console.log("Message received: " + req.body.text);
-
+	var keywordArray = [];
 	alchemy.keywords(req.body.text, {}, function(err, res) {
   		if (err) throw err;
 		keywords = res.keywords;
 		for(item in res.keywords) {
-			console.log(keywords[item]['text']);
-			if(keywords[item]['text'].toLowerCase() == 'directions')
-				maps.directions("Raleigh", keywords[item + 1]['text']);
-			else if(keywords[item]['text'].toLowerCase() == 'weather')
-				weather.getWeather(req.body.text);
+			keywordArray.push(keywords[item]['text'].toLowerCase());
 		}
+		
+		for(item = 0; item < keywordArray.length(); item++) {
+			console.log(keywordArray[item]);
+			if(keywordArray[item] == 'directions') {
+				console("Calling maps.directions");
+				maps.directions("Raleigh", keywordArray[item + 1]);
+			}
+			else if(keywordArray == 'weather') {
+				console("Calling weather.getWeater");
+				weather.getWeather(req.body.text);
+			}
+		}	
+			
 		console.log(res.keywords);
 	});
 });
