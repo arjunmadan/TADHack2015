@@ -47,4 +47,5 @@ app.post('/', function(req, response) {
   		if (err) throw err;
 		keywords = res.keywords;
 		console.log(JSON.stringify(keywords));
+	});
 });
