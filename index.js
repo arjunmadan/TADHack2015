@@ -8,11 +8,13 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
 	alchemy.concepts('Weather in Raleigh', {}, function(err, response) {
-  if (err) throw err;
+  		if (err) throw err;
 
-  // See http://www.alchemyapi.com/api/concept/htmlc.html for format of returned object
-  var concepts = response.concepts;
-  response.send(concepts);
+
+		// See http://www.alchemyapi.com/api/concept/htmlc.html for format of returned object
+		var concepts = response.concepts;
+		response.send(concepts);
+		console.log(concepts);
   
 });
 
