@@ -13,11 +13,11 @@ app.get('/', function(request, response) {
 
 
 		// See http://www.alchemyapi.com/api/concept/htmlc.html for format of returned object
-		concepts = response.concepts;
-		console.log(concepts);
+		concepts = res.concepts;
+		console.log(JSON.stringify(concepts));
   
 });
-	response.send(concepts);
+	response.send(JSON.stringify(concepts));
   
 });
 
