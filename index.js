@@ -1,17 +1,15 @@
+//Modules and files required.
 var express = require('express');
 var app = express();
 var AlchemyAPI = require('alchemy-api');
 var alchemy = new AlchemyAPI('daba2817a502d0ba775bd4066ab559972763e076');
 var maps = require('./maps.js');
+var weather = require('./weather.js');
 var bodyParser = require('body-parser');
-
 var catapult = require("node-bandwidth");
 
-//Using client directly
 var client = new catapult.Client("userId", "apiToken", "apiSecret");
 
-//Or you can use default client instance.
-//Do that only once
 catapult.Client.globalOptions.apiToken = "t-pdbvtsbm7crefjscsduudxa";
 catapult.Client.globalOptions.apiSecret = "zld5gfwxkaclimz2fjm2hzptxol5bwf4cdjujty";
 catapult.Client.globalOptions.userId = "u-m53dmzwgoxverwlyhah7wpa";
@@ -43,7 +41,10 @@ app.listen(app.get('port'), function() {
 });
 
 app.post('/', function(req, response) {
-	console.log(typeof(req));
-
 	console.log("Message received: " + req.body.text);
+
+	alchemy.keywords(req.body.text, {}, function(err, res) {
+  		if (err) throw err;
+		keywords = res.keywords;
+		console.log(JSON.stringify(keywords));
 });
