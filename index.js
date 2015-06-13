@@ -50,7 +50,7 @@ app.post('/', function(req, response) {
 			keywordArray.push(keywords[item]['text'].toLowerCase());
 		}
 		
-		for(i = 0; i < keywordArray.length(); i++) {
+		for(i = 0; i < keywordArray.length; i++) {
 			console.log(i);
 			console.log(keywordArray[i]);
 			if(keywordArray[i] == 'directions') {
