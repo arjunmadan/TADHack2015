@@ -50,13 +50,14 @@ app.post('/', function(req, response) {
 			keywordArray.push(keywords[item]['text'].toLowerCase());
 		}
 		
-		for(item = 0; item < keywordArray.length(); item++) {
-			console.log(keywordArray[item]);
-			if(keywordArray[item] == 'directions') {
+		for(i = 0; i < keywordArray.length(); i++) {
+			console.log(i);
+			console.log(keywordArray[i]);
+			if(keywordArray[i] == 'directions') {
 				console("Calling maps.directions");
-				maps.directions("Raleigh", keywordArray[item + 1]);
+				maps.directions("Raleigh", keywordArray[i + 1]);
 			}
-			else if(keywordArray == 'weather') {
+			else if(keywordArray[i] == 'weather') {
 				console("Calling weather.getWeater");
 				weather.getWeather(req.body.text);
 			}
