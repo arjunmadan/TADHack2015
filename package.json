@@ -13,7 +13,8 @@
     "dustjs-linkedin": "*",
     "http": "*",
     "googlemaps": "*",
-    "request": "*"
+    "request": "*",
+    "node-bandwidth": "*"
   },
   "engines": {
     "node": "0.12.2"
