@@ -40,7 +40,7 @@ app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 
-app.post('/', function(request, response) {
-	console.log(typeof(request));
-	console.log("Message received: " + request.body);
+app.post('/', function(req, response) {
+	console.log(typeof(req));
+	console.log("Message received: " + req.body);
 });
