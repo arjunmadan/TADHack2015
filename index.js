@@ -46,8 +46,12 @@ app.post('/', function(req, response) {
 	alchemy.keywords(req.body.text, {}, function(err, res) {
   		if (err) throw err;
 		keywords = res.keywords;
-		for(i in res.keywords) {
-			console.log(keywords[i]['text']);
+		for(item in res.keywords) {
+			console.log(keywords[item]['text']);
+			if(keywords[item]['text'].toLowerCase() == 'directions')
+				maps.directions("Raleigh", keywords[item + 1]['text']);
+			else if(keywords[item]['text'].toLowerCase() == 'weather')
+				weather.getWeather(req.body.text);
 		}
 		console.log(res.keywords);
 	});
