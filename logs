@@ -1,59 +1,101 @@
-2015-06-13T16:29:03.483888+00:00 heroku[api]: Enable Logplex by arjunmadan1992@gmail.com
-2015-06-13T16:29:03.483888+00:00 heroku[api]: Release v2 created by arjunmadan1992@gmail.com
-2015-06-13T16:29:35.916210+00:00 heroku[api]: Scale to web=1 by arjunmadan1992@gmail.com
-2015-06-13T16:29:36.008839+00:00 heroku[slug-compiler]: Slug compilation started
-2015-06-13T16:29:36.008865+00:00 heroku[slug-compiler]: Slug compilation finished
-2015-06-13T16:29:35.963366+00:00 heroku[api]: Deploy 2b5dc12 by arjunmadan1992@gmail.com
-2015-06-13T16:29:35.963366+00:00 heroku[api]: Release v3 created by arjunmadan1992@gmail.com
-2015-06-13T16:29:37.710383+00:00 heroku[web.1]: Starting process with command `node index.js`
-2015-06-13T16:29:39.246895+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
-2015-06-13T16:29:39.246919+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
-2015-06-13T16:29:39.551906+00:00 app[web.1]: Node app is running on port 35675
-2015-06-13T16:29:40.224623+00:00 heroku[web.1]: State changed from starting to up
-2015-06-13T16:29:43.072808+00:00 heroku[api]: Scale to web=1 by arjunmadan1992@gmail.com
-2015-06-13T16:29:47.224181+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=fast-castle-6504.herokuapp.com request_id=81041db9-1cb4-45c4-99aa-c83d8254fb30 fwd="216.82.234.67" dyno=web.1 connect=1ms service=7ms status=404 bytes=222
-2015-06-13T16:29:47.070322+00:00 heroku[router]: at=info method=GET path="/" host=fast-castle-6504.herokuapp.com request_id=d767796e-7a64-44a5-b81a-9e45cc8b75c6 fwd="216.82.234.67" dyno=web.1 connect=1ms service=20ms status=200 bytes=192
-2015-06-13T16:29:47.376299+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=fast-castle-6504.herokuapp.com request_id=183c55b7-dd2b-4545-a02e-af4cc892785b fwd="216.82.234.67" dyno=web.1 connect=0ms service=2ms status=404 bytes=222
-2015-06-13T16:41:59.659394+00:00 heroku[api]: Deploy e2f9d25 by arjunmadan1992@gmail.com
-2015-06-13T16:41:59.659394+00:00 heroku[api]: Release v4 created by arjunmadan1992@gmail.com
-2015-06-13T16:41:59.703120+00:00 heroku[slug-compiler]: Slug compilation started
-2015-06-13T16:41:59.703129+00:00 heroku[slug-compiler]: Slug compilation finished
-2015-06-13T16:42:00.078980+00:00 heroku[web.1]: State changed from up to starting
-2015-06-13T16:42:02.015530+00:00 heroku[web.1]: Starting process with command `node index.js`
-2015-06-13T16:42:02.910419+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2015-06-13T16:42:04.531283+00:00 heroku[web.1]: Process exited with status 143
-2015-06-13T16:42:04.305315+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
-2015-06-13T16:42:04.305339+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
-2015-06-13T16:42:04.615590+00:00 app[web.1]: /app/index.js:9
-2015-06-13T16:42:04.615593+00:00 app[web.1]: app.engine('dust',consolidate.dust);
-2015-06-13T16:42:04.615595+00:00 app[web.1]:                   ^
-2015-06-13T16:42:04.615599+00:00 app[web.1]:     at Module._compile (module.js:460:26)
-2015-06-13T16:42:04.615596+00:00 app[web.1]: ReferenceError: consolidate is not defined
-2015-06-13T16:42:04.615598+00:00 app[web.1]:     at Object.<anonymous> (/app/index.js:9:19)
-2015-06-13T16:42:04.615600+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:478:10)
-2015-06-13T16:42:04.615601+00:00 app[web.1]:     at Module.load (module.js:355:32)
-2015-06-13T16:42:04.615604+00:00 app[web.1]:     at Function.Module.runMain (module.js:501:10)
-2015-06-13T16:42:04.615607+00:00 app[web.1]:     at node.js:814:3
-2015-06-13T16:42:04.615605+00:00 app[web.1]:     at startup (node.js:129:16)
-2015-06-13T16:42:04.615603+00:00 app[web.1]:     at Function.Module._load (module.js:310:12)
-2015-06-13T16:42:05.300234+00:00 heroku[web.1]: Process exited with status 1
-2015-06-13T16:42:05.317255+00:00 heroku[web.1]: State changed from starting to crashed
-2015-06-13T16:42:05.318225+00:00 heroku[web.1]: State changed from crashed to starting
-2015-06-13T16:42:07.423320+00:00 heroku[web.1]: Starting process with command `node index.js`
-2015-06-13T16:42:09.892346+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
-2015-06-13T16:42:09.892516+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
-2015-06-13T16:42:10.329625+00:00 app[web.1]: /app/index.js:9
-2015-06-13T16:42:10.329636+00:00 app[web.1]:                   ^
-2015-06-13T16:42:10.329639+00:00 app[web.1]:     at Object.<anonymous> (/app/index.js:9:19)
-2015-06-13T16:42:10.329634+00:00 app[web.1]: app.engine('dust',consolidate.dust);
-2015-06-13T16:42:10.329637+00:00 app[web.1]: ReferenceError: consolidate is not defined
-2015-06-13T16:42:10.329640+00:00 app[web.1]:     at Module._compile (module.js:460:26)
-2015-06-13T16:42:10.329642+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:478:10)
-2015-06-13T16:42:10.329643+00:00 app[web.1]:     at Module.load (module.js:355:32)
-2015-06-13T16:42:10.329645+00:00 app[web.1]:     at Function.Module._load (module.js:310:12)
-2015-06-13T16:42:10.329646+00:00 app[web.1]:     at Function.Module.runMain (module.js:501:10)
-2015-06-13T16:42:10.329648+00:00 app[web.1]:     at startup (node.js:129:16)
-2015-06-13T16:42:10.329649+00:00 app[web.1]:     at node.js:814:3
-2015-06-13T16:42:11.282701+00:00 heroku[web.1]: Process exited with status 1
-2015-06-13T16:42:11.296282+00:00 heroku[web.1]: State changed from starting to crashed
-2015-06-13T16:42:35.418709+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=fast-castle-6504.herokuapp.com request_id=c103ad55-c686-478f-8b4b-ff6bfbebae11 fwd="216.82.234.67" dyno= connect= service= status=503 bytes=
+2015-06-13T23:46:24.502373+00:00 app[web.1]:                      "end_location" : {
+2015-06-13T23:46:24.502397+00:00 app[web.1]:                   },
+2015-06-13T23:46:24.502405+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502408+00:00 app[web.1]:                         "text" : "1 min",
+2015-06-13T23:46:24.502407+00:00 app[web.1]:                      "duration" : {
+2015-06-13T23:46:24.502412+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502414+00:00 app[web.1]:                      "end_location" : {
+2015-06-13T23:46:24.502417+00:00 app[web.1]:                         "lng" : -104.7962203
+2015-06-13T23:46:24.502415+00:00 app[web.1]:                         "lat" : 39.9143319,
+2015-06-13T23:46:24.502419+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502421+00:00 app[web.1]:                      "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eE 120th Ave\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePartial toll road\u003c/div\u003e",
+2015-06-13T23:46:24.502423+00:00 app[web.1]:                      "maneuver" : "turn-left",
+2015-06-13T23:46:24.502425+00:00 app[web.1]:                      "polyline" : {
+2015-06-13T23:46:24.502427+00:00 app[web.1]:                         "points" : "iwrrF~_p~RUJ@rC?h@?~@?z@?dDD`KBxA?bD?pI@fJ?lBArE?`M@`J?~A"
+2015-06-13T23:46:24.502428+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502430+00:00 app[web.1]:                      "start_location" : {
+2015-06-13T23:46:24.502432+00:00 app[web.1]:                         "lat" : 39.9142867,
+2015-06-13T23:46:24.502410+00:00 app[web.1]:                         "value" : 89
+2015-06-13T23:46:24.502435+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502434+00:00 app[web.1]:                         "lng" : -104.7809585
+2015-06-13T23:46:24.502440+00:00 app[web.1]:                   {
+2015-06-13T23:46:24.502444+00:00 app[web.1]:                         "text" : "0.1 mi",
+2015-06-13T23:46:24.502437+00:00 app[web.1]:                      "travel_mode" : "DRIVING"
+2015-06-13T23:46:24.502442+00:00 app[web.1]:                      "distance" : {
+2015-06-13T23:46:24.502447+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502445+00:00 app[web.1]:                         "value" : 214
+2015-06-13T23:46:24.502449+00:00 app[web.1]:                      "duration" : {
+2015-06-13T23:46:24.502452+00:00 app[web.1]:                         "value" : 79
+2015-06-13T23:46:24.502450+00:00 app[web.1]:                         "text" : "1 min",
+2015-06-13T23:46:24.502453+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502455+00:00 app[web.1]:                         "lat" : 39.9129273,
+2015-06-13T23:46:24.502457+00:00 app[web.1]:                         "lng" : -104.7962304
+2015-06-13T23:46:24.502458+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502465+00:00 app[web.1]:                      "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eMobile St\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eRestricted usage road\u003c/div\u003e",
+2015-06-13T23:46:24.502466+00:00 app[web.1]:                      "maneuver" : "turn-left",
+2015-06-13T23:46:24.502467+00:00 app[web.1]:                      "polyline" : {
+2015-06-13T23:46:24.502482+00:00 app[web.1]:                         "points" : "qwrrFj_s~R?dBP]@EDCBAJEJ@~@?vAAD?D?HCHGVWNM@A"
+2015-06-13T23:46:24.502485+00:00 app[web.1]:                      "start_location" : {
+2015-06-13T23:46:24.502486+00:00 app[web.1]:                         "lat" : 39.9143319,
+2015-06-13T23:46:24.502487+00:00 app[web.1]:                         "lng" : -104.7962203
+2015-06-13T23:46:24.502491+00:00 app[web.1]:                      "travel_mode" : "DRIVING"
+2015-06-13T23:46:24.502489+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502492+00:00 app[web.1]:                   },
+2015-06-13T23:46:24.502439+00:00 app[web.1]:                   },
+2015-06-13T23:46:24.502454+00:00 app[web.1]:                      "end_location" : {
+2015-06-13T23:46:24.502493+00:00 app[web.1]:                   {
+2015-06-13T23:46:24.502483+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502495+00:00 app[web.1]:                      "distance" : {
+2015-06-13T23:46:24.502498+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502496+00:00 app[web.1]:                         "text" : "174 ft",
+2015-06-13T23:46:24.502499+00:00 app[web.1]:                      "duration" : {
+2015-06-13T23:46:24.502497+00:00 app[web.1]:                         "value" : 53
+2015-06-13T23:46:24.502502+00:00 app[web.1]:                         "value" : 16
+2015-06-13T23:46:24.502501+00:00 app[web.1]:                         "text" : "1 min",
+2015-06-13T23:46:24.502503+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502507+00:00 app[web.1]:                         "lng" : -104.7956055
+2015-06-13T23:46:24.502504+00:00 app[web.1]:                      "end_location" : {
+2015-06-13T23:46:24.502506+00:00 app[web.1]:                         "lat" : 39.9129377,
+2015-06-13T23:46:24.502508+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502511+00:00 app[web.1]:                      "maneuver" : "turn-left",
+2015-06-13T23:46:24.502510+00:00 app[web.1]:                      "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eE 119th Way\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eRestricted usage road\u003c/div\u003e",
+2015-06-13T23:46:24.502512+00:00 app[web.1]:                      "polyline" : {
+2015-06-13T23:46:24.502513+00:00 app[web.1]:                         "points" : "ynrrFl_s~RA{B"
+2015-06-13T23:46:24.502515+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502516+00:00 app[web.1]:                      "start_location" : {
+2015-06-13T23:46:24.502517+00:00 app[web.1]:                         "lat" : 39.9129273,
+2015-06-13T23:46:24.502518+00:00 app[web.1]:                         "lng" : -104.7962304
+2015-06-13T23:46:24.502520+00:00 app[web.1]:                      },
+2015-06-13T23:46:24.502521+00:00 app[web.1]:                      "travel_mode" : "DRIVING"
+2015-06-13T23:46:24.502523+00:00 app[web.1]:                ],
+2015-06-13T23:46:24.502522+00:00 app[web.1]:                   }
+2015-06-13T23:46:24.502524+00:00 app[web.1]:                "via_waypoint" : []
+2015-06-13T23:46:24.502526+00:00 app[web.1]:             }
+2015-06-13T23:46:24.502527+00:00 app[web.1]:          ],
+2015-06-13T23:46:24.502531+00:00 app[web.1]:             "points" : "mekyEp_~~MeeCrnFggOnf_@ylC~mI}fA~oP}jN~yPowMbhOxW`mc@biCzsoAf{Al}HixC~yN{hI`ie@pfAj}[wwMxhEead@foh@wzF~rA_pGpaJ~d@``HoeCrrLycDrrJwvDhoBcpM}JokDa]{wDgdEivEnwA}nQniSetOtdHurKrjF{lB`bEJxmQy~Kp{LutEfqEawGifAanGge@moFfiBakEibForD{b@_vCvuCsvFceCwzCi`GytIe{A_`H`mCi`HpFm~FxdIioKaZk~Lmf@qdH|cCkpEh_KsoJhtDywH_Ms|Cb}FedOcU_rLlhRmnL~|DutExLy_BvmIo~Frn@iaC|zDoiGd~NuiGpjAedEmpBw`GfqMw^noMc_GpjNc{FvsHkaBpjR~vDlo_@m_@lfUj`BrfLpT`{LbpAvkE~GrgOlyAnbc@fnBbsW`jC`tb@nnBbj\\x_At{Z|vGnp[vwGdnHhrFhoNv_EhePxmEf_\\zxHp~l@jvHjzYnl@`vOqaGvmg@k`M~tW{qEnuLvHntKurAxiYhaBlpKng@~``@}rG~fk@yeDn_w@saFroc@q}CxsLuyBrcIlyBd}I~wDfuPh~AtkSpWneRy_BbwRtkClto@hjCzng@vy@`wm@aXzpe@t|Cnmd@|n@v_`AguDxhYogEffS_y@tt]weDt_h@}U~rb@y_@zefAr@hhEghHtfCoxE~gGg~@xvPogCd|LiSzuXsiA||T_lJre_@ssG|bJ_lAbfNmcJlef@k}CfjR{xE|g[eiHl|PiiFjbM{eEvaZexHrtg@qwA~ux@oSnh[t@|jMovC`pJ{cDp|X{dE~iSfJbnUoeBp`^owBxzS}nEtn_BgJdiKjoB~b\\~lBdwl@fCvvc@chCh`_@e{E`drAeuC~|jBi{Dp}x@{wF|eWk{Br~^xaA`kc@pcE|q\\|nIdzTnrA~bXamCddo@iyCvvZo}BncAsJ|yHdq@ftVoo@p{sA`Jlgt@nAr`[psE||Nl{Dt~M~z@|r[vdIbmj@`w@ny\\rgCxcYtjEpsXmWfs^]~sb@t_A~}NjxBhkRmB|ls@cwAhu`BgyDnoeAwkQ`ivAi~Enzl@aE~h\\mwF`uU_pFpuc@mhBxmfAyfWnpSqaU||Ty}@`ru@f`FncZpHtdy@iAzm~@xxE~vq@Yz}|AtfCzfc@cyAdu\\`f@`mg@tf@p}[hMbib@kyD|}XygLbbLgmf@`tYsdPtnKsgHj_VeiD`hZ{^zmn@iAjzPgi@dkG_iH_AgtFx~D{sLvtBex@dzD"
+2015-06-13T23:46:24.502528+00:00 app[web.1]:          "overview_polyline" : {
+2015-06-13T23:46:24.502532+00:00 app[web.1]:          },
+2015-06-13T23:46:24.502534+00:00 app[web.1]:          "warnings" : [],
+2015-06-13T23:46:24.502533+00:00 app[web.1]:          "summary" : "I-64 W and I-70 W",
+2015-06-13T23:46:24.502536+00:00 app[web.1]:          "waypoint_order" : []
+2015-06-13T23:46:24.502537+00:00 app[web.1]:       }
+2015-06-13T23:46:24.502538+00:00 app[web.1]:    ],
+2015-06-13T23:46:24.502540+00:00 app[web.1]:    "status" : "OK"
+2015-06-13T23:46:24.502542+00:00 app[web.1]: }
+2015-06-13T23:46:24.502543+00:00 app[web.1]: 
+2015-06-13T23:46:24.514386+00:00 app[web.1]: /app/maps.js:16
+2015-06-13T23:46:24.514391+00:00 app[web.1]:   		for(i = 0; i < body['routes'][0]['legs'][0]['steps'].length; i++)
+2015-06-13T23:46:24.514397+00:00 app[web.1]: TypeError: Cannot read property '0' of undefined
+2015-06-13T23:46:24.514394+00:00 app[web.1]:   		                             ^
+2015-06-13T23:46:24.514398+00:00 app[web.1]:     at Request._callback (/app/maps.js:16:34)
+2015-06-13T23:46:24.514400+00:00 app[web.1]:     at Request.self.callback (/app/node_modules/request/request.js:354:22)
+2015-06-13T23:46:24.514404+00:00 app[web.1]:     at Request.<anonymous> (/app/node_modules/request/request.js:1207:14)
+2015-06-13T23:46:24.514402+00:00 app[web.1]:     at Request.emit (events.js:110:17)
+2015-06-13T23:46:24.514406+00:00 app[web.1]:     at Request.emit (events.js:129:20)
+2015-06-13T23:46:24.514408+00:00 app[web.1]:     at IncomingMessage.<anonymous> (/app/node_modules/request/request.js:1153:12)
+2015-06-13T23:46:24.514410+00:00 app[web.1]:     at IncomingMessage.emit (events.js:129:20)
+2015-06-13T23:46:24.514414+00:00 app[web.1]:     at process._tickCallback (node.js:355:11)
+2015-06-13T23:46:24.514412+00:00 app[web.1]:     at _stream_readable.js:908:16
+2015-06-13T23:46:24.547417+00:00 heroku[router]: at=error code=H13 desc="Connection closed without response" method=POST path="/" host=fast-castle-6504.herokuapp.com request_id=13ae4679-a25a-464f-a16e-d80f605f0535 fwd="50.17.255.18" dyno=web.1 connect=5ms service=716ms status=503 bytes=0
+2015-06-13T23:46:25.463632+00:00 heroku[web.1]: State changed from up to crashed
+2015-06-13T23:46:25.448154+00:00 heroku[web.1]: Process exited with status 1
