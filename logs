@@ -1,0 +1,59 @@
+2015-06-13T16:29:03.483888+00:00 heroku[api]: Enable Logplex by arjunmadan1992@gmail.com
+2015-06-13T16:29:03.483888+00:00 heroku[api]: Release v2 created by arjunmadan1992@gmail.com
+2015-06-13T16:29:35.916210+00:00 heroku[api]: Scale to web=1 by arjunmadan1992@gmail.com
+2015-06-13T16:29:36.008839+00:00 heroku[slug-compiler]: Slug compilation started
+2015-06-13T16:29:36.008865+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-06-13T16:29:35.963366+00:00 heroku[api]: Deploy 2b5dc12 by arjunmadan1992@gmail.com
+2015-06-13T16:29:35.963366+00:00 heroku[api]: Release v3 created by arjunmadan1992@gmail.com
+2015-06-13T16:29:37.710383+00:00 heroku[web.1]: Starting process with command `node index.js`
+2015-06-13T16:29:39.246895+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
+2015-06-13T16:29:39.246919+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
+2015-06-13T16:29:39.551906+00:00 app[web.1]: Node app is running on port 35675
+2015-06-13T16:29:40.224623+00:00 heroku[web.1]: State changed from starting to up
+2015-06-13T16:29:43.072808+00:00 heroku[api]: Scale to web=1 by arjunmadan1992@gmail.com
+2015-06-13T16:29:47.224181+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=fast-castle-6504.herokuapp.com request_id=81041db9-1cb4-45c4-99aa-c83d8254fb30 fwd="216.82.234.67" dyno=web.1 connect=1ms service=7ms status=404 bytes=222
+2015-06-13T16:29:47.070322+00:00 heroku[router]: at=info method=GET path="/" host=fast-castle-6504.herokuapp.com request_id=d767796e-7a64-44a5-b81a-9e45cc8b75c6 fwd="216.82.234.67" dyno=web.1 connect=1ms service=20ms status=200 bytes=192
+2015-06-13T16:29:47.376299+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=fast-castle-6504.herokuapp.com request_id=183c55b7-dd2b-4545-a02e-af4cc892785b fwd="216.82.234.67" dyno=web.1 connect=0ms service=2ms status=404 bytes=222
+2015-06-13T16:41:59.659394+00:00 heroku[api]: Deploy e2f9d25 by arjunmadan1992@gmail.com
+2015-06-13T16:41:59.659394+00:00 heroku[api]: Release v4 created by arjunmadan1992@gmail.com
+2015-06-13T16:41:59.703120+00:00 heroku[slug-compiler]: Slug compilation started
+2015-06-13T16:41:59.703129+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-06-13T16:42:00.078980+00:00 heroku[web.1]: State changed from up to starting
+2015-06-13T16:42:02.015530+00:00 heroku[web.1]: Starting process with command `node index.js`
+2015-06-13T16:42:02.910419+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-06-13T16:42:04.531283+00:00 heroku[web.1]: Process exited with status 143
+2015-06-13T16:42:04.305315+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
+2015-06-13T16:42:04.305339+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
+2015-06-13T16:42:04.615590+00:00 app[web.1]: /app/index.js:9
+2015-06-13T16:42:04.615593+00:00 app[web.1]: app.engine('dust',consolidate.dust);
+2015-06-13T16:42:04.615595+00:00 app[web.1]:                   ^
+2015-06-13T16:42:04.615599+00:00 app[web.1]:     at Module._compile (module.js:460:26)
+2015-06-13T16:42:04.615596+00:00 app[web.1]: ReferenceError: consolidate is not defined
+2015-06-13T16:42:04.615598+00:00 app[web.1]:     at Object.<anonymous> (/app/index.js:9:19)
+2015-06-13T16:42:04.615600+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:478:10)
+2015-06-13T16:42:04.615601+00:00 app[web.1]:     at Module.load (module.js:355:32)
+2015-06-13T16:42:04.615604+00:00 app[web.1]:     at Function.Module.runMain (module.js:501:10)
+2015-06-13T16:42:04.615607+00:00 app[web.1]:     at node.js:814:3
+2015-06-13T16:42:04.615605+00:00 app[web.1]:     at startup (node.js:129:16)
+2015-06-13T16:42:04.615603+00:00 app[web.1]:     at Function.Module._load (module.js:310:12)
+2015-06-13T16:42:05.300234+00:00 heroku[web.1]: Process exited with status 1
+2015-06-13T16:42:05.317255+00:00 heroku[web.1]: State changed from starting to crashed
+2015-06-13T16:42:05.318225+00:00 heroku[web.1]: State changed from crashed to starting
+2015-06-13T16:42:07.423320+00:00 heroku[web.1]: Starting process with command `node index.js`
+2015-06-13T16:42:09.892346+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
+2015-06-13T16:42:09.892516+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
+2015-06-13T16:42:10.329625+00:00 app[web.1]: /app/index.js:9
+2015-06-13T16:42:10.329636+00:00 app[web.1]:                   ^
+2015-06-13T16:42:10.329639+00:00 app[web.1]:     at Object.<anonymous> (/app/index.js:9:19)
+2015-06-13T16:42:10.329634+00:00 app[web.1]: app.engine('dust',consolidate.dust);
+2015-06-13T16:42:10.329637+00:00 app[web.1]: ReferenceError: consolidate is not defined
+2015-06-13T16:42:10.329640+00:00 app[web.1]:     at Module._compile (module.js:460:26)
+2015-06-13T16:42:10.329642+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:478:10)
+2015-06-13T16:42:10.329643+00:00 app[web.1]:     at Module.load (module.js:355:32)
+2015-06-13T16:42:10.329645+00:00 app[web.1]:     at Function.Module._load (module.js:310:12)
+2015-06-13T16:42:10.329646+00:00 app[web.1]:     at Function.Module.runMain (module.js:501:10)
+2015-06-13T16:42:10.329648+00:00 app[web.1]:     at startup (node.js:129:16)
+2015-06-13T16:42:10.329649+00:00 app[web.1]:     at node.js:814:3
+2015-06-13T16:42:11.282701+00:00 heroku[web.1]: Process exited with status 1
+2015-06-13T16:42:11.296282+00:00 heroku[web.1]: State changed from starting to crashed
+2015-06-13T16:42:35.418709+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=fast-castle-6504.herokuapp.com request_id=c103ad55-c686-478f-8b4b-ff6bfbebae11 fwd="216.82.234.67" dyno= connect= service= status=503 bytes=

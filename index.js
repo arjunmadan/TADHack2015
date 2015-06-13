@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var AlchemyAPI = require('alchemy-api');
 var alchemy = new AlchemyAPI('daba2817a502d0ba775bd4066ab559972763e076');
+var consolidate = require('consolidate');
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
@@ -33,6 +34,7 @@ function example(req, res) {
 
 	//Start the analysis chain
 	entities(req, res, output);
+	console.log(output);
 }
 function entities(req, res, output) {
 	alchemyapi.entities('text', demo_text,{ 'sentiment':1 }, function(response) {
