@@ -32,6 +32,7 @@ function getWeather(text){
 	console.log('Yahoo Weather Query: '+ yahooGetQuery);
 
 	sendGETRequest(yahooGetQuery); 
+	
 }
 
 exports.getWeather = getWeather;
