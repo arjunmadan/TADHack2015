@@ -41,5 +41,5 @@ app.listen(app.get('port'), function() {
 });
 
 app.post('/', function(request, response) {
-	console.log("Message received: " + request);
+	console.log("Message received: " + JSON.stringify(request));
 });
