@@ -17,6 +17,7 @@ catapult.Client.globalOptions.userId = "u-m53dmzwgoxverwlyhah7wpa";
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser());
 
 app.get('/', function(request, response) {
 	var keywords;
@@ -42,5 +43,6 @@ app.listen(app.get('port'), function() {
 
 app.post('/', function(req, response) {
 	console.log(typeof(req));
+
 	console.log("Message received: " + req.body);
 });
