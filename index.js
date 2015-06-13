@@ -2,7 +2,8 @@ var express = require('express');
 var app = express();
 var AlchemyAPI = require('alchemy-api');
 var alchemy = new AlchemyAPI('daba2817a502d0ba775bd4066ab559972763e076');
-var maps = require('./maps.js')
+var maps = require('./maps.js');
+var bodyParser = require('body-parser');
 
 var catapult = require("node-bandwidth");
 

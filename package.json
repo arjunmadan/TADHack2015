@@ -14,7 +14,8 @@
     "http": "*",
     "googlemaps": "*",
     "request": "*",
-    "node-bandwidth": "*"
+    "node-bandwidth": "*",
+    "body-parser": "*"
   },
   "engines": {
     "node": "0.12.2"
