@@ -45,7 +45,8 @@ app.post('/', function(req, response) {
 
 	alchemy.keywords(req.body.text, {}, function(err, res) {
   		if (err) throw err;
-		keywords = res.keywords;
-		console.log(JSON.stringify(keywords));
+		keywords = JSON.parse(res.keywords);
+
+		console.log(keywords);
 	});
 });
