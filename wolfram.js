@@ -12,10 +12,10 @@ function getAnswer(question, replyTo, messageFrom) {
 
 	console.log(question);
 	message = '';
-	Wolfram.query(question, function(err, result) {
+	Wolfram.query(encodeURI(question), function(err, result) {
 		if(err) {
 			console.log(err);
-			message = "Sorry, your query didn't turn up any results.";
+			message = "Err: Sorry, your query didn't turn up any results.";
 		}
 		else if(result.queryresult.$.numpods=='0'){
 			console.log("No results");
