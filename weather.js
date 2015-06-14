@@ -21,8 +21,8 @@ function sendGETRequest(query){
 		temp = JSON.parse(body);
 		console.log(temp);
 		str = temp['query']['results']['channel']['item']['description'];
-		str=str.replace(/<br>/gi, "");
-		str=str.replace(/<p.*>/gi, "");
+		str=str.replace(/<br>/gi, "\n");
+		str=str.replace(/<p.*>/gi, "\n");
 		str=str.replace(/<a.*href="(.*?)".*>(.*?)<\/a>/gi, "");
 		str=str.replace(/<(?:.|\s)*?>/g, "");
 		console.log(str);
