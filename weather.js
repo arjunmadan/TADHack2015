@@ -17,7 +17,7 @@ function sendGETRequest(query){
 }
 
 function getWeather(text){
- 	var getQuery = "select * from weather.forecast where woeid in";
+ 	var getQuery = "select item.condition from weather.forecast where woeid in";
  	getQuery+= "(select woeid from geo.places(1) where text=\"";
  	getQuery+= text;
  	getQuery+="\")";
