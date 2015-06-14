@@ -54,7 +54,7 @@ app.post('/', function(req, response) {
 		for(item in res.keywords) {
 			keywordArray.push(keywords[item]['text'].toLowerCase());
 		}
-		
+		var flag = 0;
 		for(i = 0; i < keywordArray.length; i++) {
 			console.log(i);
 			console.log(keywordArray[i]);
@@ -62,17 +62,18 @@ app.post('/', function(req, response) {
 				console.log("Calling maps.directions");
 				console.log(req.body.to);
 				maps.directions(origin, keywordArray[i - 1], req.body.from, req.body.to);
+				flag = 1;
 			}
 			else if(keywordArray[i] == 'weather') {
 				console.log("Calling weather.getWeather");
 				console.log(req.body.to);
 				weather.getWeather(req.body.text, req.body.from, req.body.to);
+				flag = 1;
 			}
-			else
-			{
-				console.log("Calling wolfram");
-				wolfram.getAnswer(req.body.text, req.body.from, req.body.to);
-			}
+		}	
+		if(flag == 0) {
+			console.log("Calling wolfram");
+			wolfram.getAnswer(req.body.text, req.body.from, req.body.to);
 		}	
 			
 		console.log(res.keywords);
