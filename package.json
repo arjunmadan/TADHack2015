@@ -17,8 +17,7 @@
     "node-bandwidth": "*",
     "body-parser": "*",
     "promise": "*",
-    "node-wolfram": "*",
-    "easy-zip": "*"
+    "node-wolfram": "*"
   },
   "engines": {
     "node": "0.12.2"

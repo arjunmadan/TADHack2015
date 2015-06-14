@@ -1,8 +1,6 @@
 var catapult = require("node-bandwidth");
 var Client = require('node-wolfram');
 var Wolfram = new Client('TRR8TK-XJTTAVAGXU');
-var easyZip = require('easy-zip');
-
 
 
 var client = new catapult.Client("userId", "apiToken", "apiSecret");
@@ -14,6 +12,7 @@ catapult.Client.globalOptions.userId = "u-ijxrm4pft4kdpnq4kti4uny";
 function getAnswer(question, replyTo, messageFrom) {
 	question = question.split(']');
 	question = question[1];
+	question = 
 	console.log("Question: " + question);
 	message = '';
 	Wolfram.query(question, function(err, result) {
