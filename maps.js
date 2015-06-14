@@ -12,7 +12,7 @@ var API_KEY = 'AIzaSyC2sLZa8Y1O2m4iGX8EP2vDZttXvlsyHwk';
 
 var url = 'https://maps.googleapis.com/maps/api/directions/json?'
 
-function directions(origin, destination) {
+function directions(origin, destination, replyTo) {
 	
 	var query = 'origin=' + origin + '&destination=' + destination + '&key=' + API_KEY;
 	
@@ -22,20 +22,22 @@ function directions(origin, destination) {
 		test = JSON.parse(body);
   		temp = test['routes'][0]['legs'][0]['steps'];
   		console.log(temp);
+  		var str = '';
   		for(i = 0; i < temp.length; i++)
 		{
-			str = temp[i]['html_instructions'] + " for " + temp[i]['distance']['text'];
-			str=str.replace(/<br>/gi, "\n");
-			str=str.replace(/<p.*>/gi, "\n");
-			str=str.replace(/<a.*href="(.*?)".*>(.*?)<\/a>/gi, "\n");
-			str=str.replace(/<(?:.|\s)*?>/g, "");
+			str += temp[i]['html_instructions'] + " for " + temp[i]['distance']['text'];
+			str = str.replace(/<br>/gi, "\n");
+			str = str.replace(/<p.*>/gi, "\n");
+			str = str.replace(/<a.*href="(.*?)".*>(.*?)<\/a>/gi, "\n");
+			str = str.replace(/<(?:.|\s)*?>/g, "");
 			console.log(str);
-			catapult.Message.create({from: "+12525130313", to: "+19199855863", text: str}, function(err, message){
+			
+		}
+		catapult.Message.create({from: "+12525130313", to: replyTo, text: str}, function(err, message){
 			if(err){
     			return console.error(err.message);
   			}
   				console.log("Message id is " + message.id);});
-		}
   	});
 
 	

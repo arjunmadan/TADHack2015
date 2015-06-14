@@ -31,7 +31,7 @@ app.get('/', function(request, response) {
 	directions = maps.directions();
 	console.log(JSON.stringify(directions));
 	response.send(JSON.stringify(directions));
-	
+
   
 });
 
@@ -59,11 +59,11 @@ app.post('/', function(req, response) {
 			console.log(keywordArray[i]);
 			if(keywordArray[i] == 'directions') {
 				console.log("Calling maps.directions");
-				maps.directions(origin, keywordArray[i - 1]);
+				maps.directions(origin, keywordArray[i - 1], req.body.from);
 			}
 			else if(keywordArray[i] == 'weather') {
 				console.log("Calling weather.getWeather");
-				weather.getWeather(req.body.text);
+				weather.getWeather(req.body.text, req.body.from);
 			}
 		}	
 			

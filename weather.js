@@ -7,7 +7,7 @@ catapult.Client.globalOptions.apiToken = "t-pdbvtsbm7crefjscsduudxa";
 catapult.Client.globalOptions.apiSecret = "zld5gfwxkaclimz2fjm2hzptxol5bwf4cdjujty";
 catapult.Client.globalOptions.userId = "u-m53dmzwgoxverwlyhah7wpa";
 
-function sendGETRequest(query){
+function sendGETRequest(query, replyTo){
 	var url = "http://query.yahooapis.com/";
 
 	var options= {
@@ -28,7 +28,7 @@ function sendGETRequest(query){
 		  str = str.substring(2, str.length - 20);
 		  console.log(str);
           console.log(temp['query']['results']['channel']['item']['description']);
-          catapult.Message.create({from: "+12525130313", to: "+19199855863", text: str}, function(err, message){
+          catapult.Message.create({from: "+12525130313", to: replyTo, text: str}, function(err, message){
           	if(err){
   				  return console.error(err.message);
   			}
@@ -36,7 +36,7 @@ function sendGETRequest(query){
       });
 }
 
-function getWeather(text){
+function getWeather(text, replyTo){
  	var getQuery = "select * from weather.forecast where woeid in";
  	getQuery+= "(select woeid from geo.places(1) where text=\"";
  	getQuery+= text.substring(22, text.length);
@@ -52,7 +52,7 @@ function getWeather(text){
 
 	console.log('Yahoo Weather Query: '+ yahooGetQuery);
 
-	sendGETRequest(yahooGetQuery); 
+	sendGETRequest(yahooGetQuery, replyTo); 
 
 }
 
