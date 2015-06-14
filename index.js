@@ -42,6 +42,10 @@ app.listen(app.get('port'), function() {
 
 app.post('/', function(req, response) {
 	console.log("Message received: " + req.body.text);
+	for(i = 1; i < 22; i++){
+		origin += req.body.text[i];
+	}
+	console.log(origin);
 	var keywordArray = [];
 	alchemy.keywords(req.body.text, {}, function(err, res) {
   		if (err) throw err;
