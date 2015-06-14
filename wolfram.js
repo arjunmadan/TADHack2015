@@ -42,7 +42,7 @@ function getAnswer(question, replyTo, messageFrom) {
 		}
 		console.log(message);
 
-		catapult.Message.create({from: messageFrom, to: replyTo, text: message}, function(err, message){
+		catapult.Message.create({from: messageFrom, to: replyTo, text: message.substring(0,150)}, function(err, message){
 			if(err){
     			return console.error(err.message);
   			}

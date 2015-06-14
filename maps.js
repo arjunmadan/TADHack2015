@@ -33,7 +33,7 @@ function directions(origin, destination, replyTo, messageFrom) {
 			str += '\n';
 		}
 		console.log(str);
-		catapult.Message.create({from: messageFrom, to: replyTo, text: str}, function(err, message){
+		catapult.Message.create({from: messageFrom, to: replyTo, text: str.substring(0, 150)}, function(err, message){
 			if(err){
     			return console.error(err.message);
   			}
