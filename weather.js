@@ -12,7 +12,8 @@ function sendGETRequest(query){
 	request(url + query, function(error, response, body) {
           console.log(body);
           text = JSON.parse(body);
-          console.log(text['query']['results']['channel']['item']['description']);
+          console.log(text);
+         // console.log(text['query']['results']['channel']['item']['description']);
       });
 }
 
