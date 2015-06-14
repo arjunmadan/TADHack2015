@@ -42,6 +42,7 @@ app.listen(app.get('port'), function() {
 
 app.post('/', function(req, response) {
 	console.log("Message received: " + req.body.text);
+	var origin = '';
 	for(i = 1; i < 22; i++){
 		origin += req.body.text[i];
 	}
