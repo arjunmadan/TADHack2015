@@ -5,9 +5,9 @@ var Wolfram = new Client('TRR8TK-XJTTAVAGXU');
 
 var client = new catapult.Client("userId", "apiToken", "apiSecret");
 
-catapult.Client.globalOptions.apiToken = "t-nvaioxjgpz2ue4kjsohwisa";
-catapult.Client.globalOptions.apiSecret = "dvm7nlr5ksdybtgqfzxx6fgabzewv7c372zxcri";
-catapult.Client.globalOptions.userId = "u-ijxrm4pft4kdpnq4kti4uny";
+catapult.Client.globalOptions.apiToken = "t-pdbvtsbm7crefjscsduudxa";
+catapult.Client.globalOptions.apiSecret = "zld5gfwxkaclimz2fjm2hzptxol5bwf4cdjujty";
+catapult.Client.globalOptions.userId = "u-m53dmzwgoxverwlyhah7wpa";
 
 function getAnswer(question, replyTo, messageFrom) {
 	question = question.split(']');
