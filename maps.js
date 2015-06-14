@@ -9,14 +9,8 @@ var url = 'https://maps.googleapis.com/maps/api/directions/json?'
 function directions(origin, destination) {
 	
 	var query = 'origin=' + origin + '&destination=' + destination + '&key=' + API_KEY;
-	for(i = 0; i < query.length; i++)
-	{
-		if(query[i] == ' ')
-		{
-			query[i] = '+';
-		}
-	}
-	console.log(url + query);
+	
+	console.log(encodeURI(url + query));
 	request(url + query, function(error, response, body) {
 		console.log(body['routes']);
   		temp = body['routes'][0]['legs'][0]['steps'];
