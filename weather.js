@@ -28,12 +28,15 @@ function sendGETRequest(query, replyTo, messageFrom){
 		  str = str.substring(2, str.length - 20);
 		  console.log(str);
           console.log(temp['query']['results']['channel']['item']['description']);
-          catapult.Message.create({from: messageFrom, to: replyTo, text: str.substring(0, 320)}, function(err, message){
-          	if(err){
-  				  return console.error(err.message);
-  			}
-  			console.log("Message id is " + message.id);});
-      });
+          
+          for(i = 0; i < str.length; i+=150)
+			catapult.Message.create({from: messageFrom, to: replyTo, text: str.substring(i, i+150)}, function(err, message){
+				if(err){
+    				return console.error(err.message);
+  				}
+  					console.log("Message id is " + message.id);});
+  			});
+
 }
 
 function getWeather(text, replyTo, messageFrom){
