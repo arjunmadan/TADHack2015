@@ -13,7 +13,7 @@ function sendGETRequest(query){
           console.log(body);
           temp = JSON.parse(body);
           console.log(temp);
-          console.log(text['query']['results']['channel']['item']['description']);
+          console.log(temp['query']['results']['channel']['item']['description']);
       });
 }
 
