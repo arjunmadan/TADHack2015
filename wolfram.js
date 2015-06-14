@@ -13,6 +13,7 @@ function getAnswer(question, replyTo, messageFrom) {
 	console.log(question);
 	message = '';
 	Wolfram.query(encodeURI(question), function(err, result) {
+		console.log(result);
 		if(err) {
 			console.log(err);
 			message = "Err: Sorry, your query didn't turn up any results.";
