@@ -16,7 +16,8 @@
     "request": "*",
     "node-bandwidth": "*",
     "body-parser": "*",
-    "promise": "*"
+    "promise": "*",
+    "node-wolfram": "*"
   },
   "engines": {
     "node": "0.12.2"

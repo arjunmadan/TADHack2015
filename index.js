@@ -5,6 +5,7 @@ var AlchemyAPI = require('alchemy-api');
 var alchemy = new AlchemyAPI('daba2817a502d0ba775bd4066ab559972763e076');
 var maps = require('./maps.js');
 var weather = require('./weather.js');
+var wolfram = require('./wolfram');
 var bodyParser = require('body-parser');
 var catapult = require("node-bandwidth");
 
@@ -66,6 +67,11 @@ app.post('/', function(req, response) {
 				console.log("Calling weather.getWeather");
 				console.log(req.body.to);
 				weather.getWeather(req.body.text, req.body.from, req.body.to);
+			}
+			else
+			{
+				console.log("Calling wolfram");
+				wolfram.getAnswer(req.body.text, req.body.from, req.body.to);
 			}
 		}	
 			
