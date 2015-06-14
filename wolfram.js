@@ -9,7 +9,8 @@ catapult.Client.globalOptions.apiSecret = "dvm7nlr5ksdybtgqfzxx6fgabzewv7c372zxc
 catapult.Client.globalOptions.userId = "u-ijxrm4pft4kdpnq4kti4uny";
 
 function getAnswer(question, replyTo, messageFrom) {
-	question = question.substring(22,question.length);
+	question = question.split(']');
+	question = question[1];
 	console.log("Question: " + question);
 	message = '';
 	Wolfram.query(question, function(err, result) {
