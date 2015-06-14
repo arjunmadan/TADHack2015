@@ -18,7 +18,7 @@ function directions(origin, destination) {
 	}
 	console.log(url + query);
 	request(url + query, function(error, response, body) {
-		console.log(body);
+		console.log(body['routes']);
   		temp = body['routes'][0]['legs'][0]['steps'];
   		console.log(temp);
   		for(i = 0; i < temp.length; i++)
