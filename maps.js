@@ -6,7 +6,7 @@ var client = new catapult.Client("userId", "apiToken", "apiSecret");
 
 catapult.Client.globalOptions.apiToken = "t-nvaioxjgpz2ue4kjsohwisa";
 catapult.Client.globalOptions.apiSecret = "dvm7nlr5ksdybtgqfzxx6fgabzewv7c372zxcri";
-catapult.Client.globalOptions.userId = "u-ijxrm4pft4kdpnq4kti4un";
+catapult.Client.globalOptions.userId = "u-ijxrm4pft4kdpnq4kti4uny";
 
 var API_KEY = 'AIzaSyC2sLZa8Y1O2m4iGX8EP2vDZttXvlsyHwk';
 

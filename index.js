@@ -12,7 +12,7 @@ var client = new catapult.Client("userId", "apiToken", "apiSecret");
 
 catapult.Client.globalOptions.apiToken = "t-nvaioxjgpz2ue4kjsohwisa";
 catapult.Client.globalOptions.apiSecret = "dvm7nlr5ksdybtgqfzxx6fgabzewv7c372zxcri";
-catapult.Client.globalOptions.userId = "u-ijxrm4pft4kdpnq4kti4un";
+catapult.Client.globalOptions.userId = "u-ijxrm4pft4kdpnq4kti4uny";
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
