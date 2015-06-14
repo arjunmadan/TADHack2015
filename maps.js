@@ -30,9 +30,9 @@ function directions(origin, destination, replyTo) {
 			str = str.replace(/<p.*>/gi, "\n");
 			str = str.replace(/<a.*href="(.*?)".*>(.*?)<\/a>/gi, "\n");
 			str = str.replace(/<(?:.|\s)*?>/g, "");
-			console.log(str);
-			
+			str += '\n';
 		}
+		console.log(str);
 		catapult.Message.create({from: "+12525130313", to: replyTo, text: str}, function(err, message){
 			if(err){
     			return console.error(err.message);
