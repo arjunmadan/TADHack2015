@@ -11,8 +11,8 @@ function sendGETRequest(query){
 
 	request(url + query, function(error, response, body) {
           console.log(body);
-          text = JSON.parse(body);
-          console.log(text);
+          temp = JSON.parse(body);
+          console.log(temp);
          // console.log(text['query']['results']['channel']['item']['description']);
       });
 }
@@ -20,7 +20,7 @@ function sendGETRequest(query){
 function getWeather(text){
  	var getQuery = "select item.condition from weather.forecast where woeid in";
  	getQuery+= "(select woeid from geo.places(1) where text=\"";
- 	getQuery+= text;
+ 	getQuery+= text.substring(22, text.length);
  	getQuery+="\")";
 
  	console.log('Weather Query:' + getQuery);
