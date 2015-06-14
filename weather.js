@@ -17,22 +17,22 @@ function sendGETRequest(query){
 	};
 
 	request(url + query, function(error, response, body) {
-		console.log(body);
-		temp = JSON.parse(body);
-		console.log(temp);
-		str = temp['query']['results']['channel']['item']['description'];
-		str=str.replace(/<br>/gi, "\n");
-		str=str.replace(/<p.*>/gi, "\n");
-		str=str.replace(/<a.*href="(.*?)".*>(.*?)<\/a>/gi, "");
-		str=str.replace(/<(?:.|\s)*?>/g, "");
-		console.log(str);
-		console.log(temp['query']['results']['channel']['item']['description']);
-		catapult.Message.create({from: "+12525130313", to: "+19199855863", text: "hello"}, function(err, message){
-			if(err){
-					return console.error(err.message);
-			}
-			console.log("Message id is " + message.id);});
-		});
+          console.log(body);
+          temp = JSON.parse(body);
+          console.log(temp);
+          str = temp['query']['results']['channel']['item']['description'];
+		  str=str.replace(/<br>/gi, "\n");
+		  str=str.replace(/<p.*>/gi, "\n");
+		  str=str.replace(/<a.*href="(.*?)".*>(.*?)<\/a>/gi, "\n");
+		  str=str.replace(/<(?:.|\s)*?>/g, "");
+		  console.log(str);
+          console.log(temp['query']['results']['channel']['item']['description']);
+          catapult.Message.create({from: "+12525130313", to: "+19199855863", text: "hello"}, function(err, message){
+          	if(err){
+  				  return console.error(err.message);
+  			}
+  			console.log("Message id is " + message.id);});
+      });
 }
 
 function getWeather(text){
