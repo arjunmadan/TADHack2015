@@ -24,7 +24,11 @@ function directions(origin, destination) {
   		
   		for(i = 0; i < temp.length; i++)
 		{
-			catapult.Message.create({from: "+12525130313", to: "+19199855863", text: temp[i]['html_instructions'] + " for " + temp[i]['distance']['text']}, function(err, message){...});
+			catapult.Message.create({from: "+12525130313", to: "+19199855863", text: temp[i]['html_instructions'] + " for " + temp[i]['distance']['text']}, function(err, message){
+			if(err){
+    			return console.error(err.message);
+  			}
+  				console.log("Message id is " + message.id);});
 		}
   	});
 
