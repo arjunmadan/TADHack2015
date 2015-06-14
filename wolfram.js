@@ -12,7 +12,7 @@ function getAnswer(question, replyTo, messageFrom) {
 
 	console.log(question);
 	message = '';
-	Wolfram.query(encodeURI(question), function(err, result) {
+	Wolfram.query("2+2", function(err, result) {
 		console.log(result);
 		if(err) {
 			console.log(err);
