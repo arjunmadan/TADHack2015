@@ -31,6 +31,7 @@ app.get('/', function(request, response) {
 	directions = maps.directions();
 	console.log(JSON.stringify(directions));
 	response.send(JSON.stringify(directions));
+	
   
 });
 

@@ -1,4 +1,11 @@
 var request = require('request');
+var catapult = require("node-bandwidth");
+
+var client = new catapult.Client("userId", "apiToken", "apiSecret");
+
+catapult.Client.globalOptions.apiToken = "t-pdbvtsbm7crefjscsduudxa";
+catapult.Client.globalOptions.apiSecret = "zld5gfwxkaclimz2fjm2hzptxol5bwf4cdjujty";
+catapult.Client.globalOptions.userId = "u-m53dmzwgoxverwlyhah7wpa";
 
 function sendGETRequest(query){
 	var url = "http://query.yahooapis.com/";
@@ -14,6 +21,7 @@ function sendGETRequest(query){
           temp = JSON.parse(body);
           console.log(temp);
           console.log(temp['query']['results']['channel']['item']['description']);
+          catapult.Message.create({from: "+12525130313", to: "+19199855863", text: temp[i]['html_instructions'] + " for " + temp['query']['results']['channel']['item']['description']}, function(err, message){...});
       });
 }
 
