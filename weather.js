@@ -25,6 +25,7 @@ function sendGETRequest(query){
 		  str=str.replace(/<p.*>/gi, "\n");
 		  str=str.replace(/<a.*href="(.*?)".*>(.*?)<\/a>/gi, "\n");
 		  str=str.replace(/<(?:.|\s)*?>/g, "");
+		  str = str.substring(2, str.length - 20);
 		  console.log(str);
           console.log(temp['query']['results']['channel']['item']['description']);
           catapult.Message.create({from: "+12525130313", to: "+19199855863", text: str}, function(err, message){
