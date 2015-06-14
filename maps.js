@@ -25,7 +25,7 @@ function directions(origin, destination, replyTo, messageFrom) {
   		var str = '';
   		for(i = 0; i < temp.length; i++)
 		{
-			str = temp[i]['html_instructions'] + " for " + temp[i]['distance']['text'];
+			str = temp[i]['html_instructions'] + " in " + temp[i]['distance']['text'];
 			str = str.replace(/<br>/gi, "\n");
 			str = str.replace(/<p.*>/gi, "\n");
 			str = str.replace(/<a.*href="(.*?)".*>(.*?)<\/a>/gi, "\n");
