@@ -59,10 +59,12 @@ app.post('/', function(req, response) {
 			console.log(keywordArray[i]);
 			if(keywordArray[i] == 'directions') {
 				console.log("Calling maps.directions");
+				console.log(req.body.to);
 				maps.directions(origin, keywordArray[i - 1], req.body.from, req.body.to);
 			}
 			else if(keywordArray[i] == 'weather') {
 				console.log("Calling weather.getWeather");
+				console.log(req.body.to);
 				weather.getWeather(req.body.text, req.body.from, req.body.to);
 			}
 		}	
