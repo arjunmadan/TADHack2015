@@ -21,7 +21,7 @@ function sendGETRequest(query){
           temp = JSON.parse(body);
           console.log(temp);
           console.log(temp['query']['results']['channel']['item']['description']);
-          catapult.Message.create({from: "+12525130313", to: "+19199855863", text: temp[i]['html_instructions'] + " for " + temp['query']['results']['channel']['item']['description']}, function(err, message){
+          catapult.Message.create({from: "+12525130313", to: "+19199855863", text: temp['query']['results']['channel']['item']['description'] + " for " + temp['query']['results']['channel']['item']['description']}, function(err, message){
           	if(err){
   				  return console.error(err.message);
   			}
