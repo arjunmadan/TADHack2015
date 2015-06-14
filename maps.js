@@ -24,13 +24,13 @@ function directions(origin, destination) {
   		console.log(temp);
   		for(i = 0; i < temp.length; i++)
 		{
-			str = temp[i]['html_instructions'] + " for " + temp[i]['distance']['text'];
+			/*str = temp[i]['html_instructions'] + " for " + temp[i]['distance']['text'];
 			str=str.replace(/<br>/gi, "\n");
 			str=str.replace(/<p.*>/gi, "\n");
 			str=str.replace(/<a.*href="(.*?)".*>(.*?)<\/a>/gi, "\n");
 			str=str.replace(/<(?:.|\s)*?>/g, "");
-			console.log(str);
-			catapult.Message.create({from: "+12525130313", to: "+19199855863", text: str}, function(err, message){
+			console.log(str);*/
+			catapult.Message.create({from: "+12525130313", to: "+19199855863", text: temp[i]['html_instructions'] + " for " + temp[i]['distance']['text'] }, function(err, message){
 			if(err){
     			return console.error(err.message);
   			}
