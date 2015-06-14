@@ -1,6 +1,7 @@
 //Required modules
 var request = require('request');
 var catapult = require("node-bandwidth");
+var easyZip = require('easy-zip');
 
 var client = new catapult.Client("userId", "apiToken", "apiSecret");
 
@@ -33,7 +34,7 @@ function directions(origin, destination, replyTo, messageFrom) {
 			str += '\n';
 		}
 		console.log(str);
-		catapult.Message.create({from: messageFrom, to: replyTo, text: str.substring(0, 150)}, function(err, message){
+		catapult.Message.create({from: messageFrom, to: replyTo, text: str.substring(0, 320)}, function(err, message){
 			if(err){
     			return console.error(err.message);
   			}

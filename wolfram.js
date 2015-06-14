@@ -1,6 +1,9 @@
 var catapult = require("node-bandwidth");
 var Client = require('node-wolfram');
 var Wolfram = new Client('TRR8TK-XJTTAVAGXU');
+var easyZip = require('easy-zip');
+
+
 
 var client = new catapult.Client("userId", "apiToken", "apiSecret");
 
@@ -42,7 +45,7 @@ function getAnswer(question, replyTo, messageFrom) {
 		}
 		console.log(message);
 
-		catapult.Message.create({from: messageFrom, to: replyTo, text: message.substring(0,150)}, function(err, message){
+		catapult.Message.create({from: messageFrom, to: replyTo, text: message.substring(0,320)}, function(err, message){
 			if(err){
     			return console.error(err.message);
   			}

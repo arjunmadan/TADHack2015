@@ -1,5 +1,6 @@
 var request = require('request');
 var catapult = require("node-bandwidth");
+var easyZip = require('easy-zip');
 
 var client = new catapult.Client("userId", "apiToken", "apiSecret");
 
@@ -28,7 +29,7 @@ function sendGETRequest(query, replyTo, messageFrom){
 		  str = str.substring(2, str.length - 20);
 		  console.log(str);
           console.log(temp['query']['results']['channel']['item']['description']);
-          catapult.Message.create({from: messageFrom, to: replyTo, text: str.substring(0, 150)}, function(err, message){
+          catapult.Message.create({from: messageFrom, to: replyTo, text: str.substring(0, 320)}, function(err, message){
           	if(err){
   				  return console.error(err.message);
   			}
