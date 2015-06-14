@@ -12,7 +12,7 @@ function getAnswer(question, replyTo, messageFrom) {
 
 	console.log(question);
 	message = '';
-	Wolfram.query("2+2", function(err, result) {
+	Wolfram.query("define apple", function(err, result) {
 		console.log(result);
 		if(err) {
 			console.log(err);
