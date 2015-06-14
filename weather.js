@@ -38,9 +38,10 @@ function sendGETRequest(query, replyTo, messageFrom){
 
 function getWeather(text, replyTo, messageFrom){
  	var getQuery = "select * from weather.forecast where woeid in";
- 	getQuery+= "(select woeid from geo.places(1) where text=\"";
- 	getQuery+= text.substring(22, text.length);
- 	getQuery+="\")";
+ 	getQuery += "(select woeid from geo.places(1) where text=\"";
+ 	temp = text.split(']');
+ 	getQuery += temp[1];
+ 	getQuery +="\")";
 
  	console.log('Weather Query:' + getQuery);
 
