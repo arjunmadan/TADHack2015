@@ -8,7 +8,7 @@ catapult.Client.globalOptions.apiToken = "t-nvaioxjgpz2ue4kjsohwisa";
 catapult.Client.globalOptions.apiSecret = "dvm7nlr5ksdybtgqfzxx6fgabzewv7c372zxcri";
 catapult.Client.globalOptions.userId = "u-ijxrm4pft4kdpnq4kti4uny";
 
-function getAnswer(question, messageFrom, sendTo) {
+function getAnswer(question, messageFrom, replyTo) {
 
 	console.log(question);
 	message = '';
