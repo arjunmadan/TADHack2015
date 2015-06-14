@@ -43,12 +43,12 @@ function getAnswer(question, replyTo, messageFrom) {
 			}
 		}
 		console.log(message);
-
-		catapult.Message.create({from: messageFrom, to: replyTo, text: message.substring(0,320)}, function(err, message){
-			if(err){
-    			return console.error(err.message);
-  			}
-  				console.log("Message id is " + message.id);});
-  		});
+		for(i = 0; i < message.length; i+=150)
+			catapult.Message.create({from: messageFrom, to: replyTo, text: message.substring(i, i+150)}, function(err, message){
+				if(err){
+    				return console.error(err.message);
+  				}
+  					console.log("Message id is " + message.id);});
+  			});
 }	
 exports.getAnswer = getAnswer;
