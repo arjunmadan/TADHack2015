@@ -1,7 +1,6 @@
 //Required modules
 var request = require('request');
 var catapult = require("node-bandwidth");
-var easyZip = require('easy-zip');
 
 var client = new catapult.Client("userId", "apiToken", "apiSecret");
 
