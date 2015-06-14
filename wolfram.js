@@ -1,6 +1,6 @@
 var catapult = require("node-bandwidth");
 var Client = require('node-wolfram');
-var Wolfram = new Client('TRR8TK-XJTTAVAGXU');
+var Wolfram = new Client('R6LLAG-WHEET65T6W');
 
 var client = new catapult.Client("userId", "apiToken", "apiSecret");
 
