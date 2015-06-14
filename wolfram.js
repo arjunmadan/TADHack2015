@@ -10,9 +10,9 @@ catapult.Client.globalOptions.userId = "u-ijxrm4pft4kdpnq4kti4uny";
 
 function getAnswer(question, replyTo, messageFrom) {
 
-	console.log(question);
+	console.log("Question: " + question);
 	message = '';
-	Wolfram.query("define apple", function(err, result) {
+	Wolfram.query(question, function(err, result) {
 		console.log(result);
 		if(err) {
 			console.log(err);
