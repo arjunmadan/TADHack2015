@@ -12,7 +12,7 @@ var API_KEY = 'AIzaSyC2sLZa8Y1O2m4iGX8EP2vDZttXvlsyHwk';
 
 var url = 'https://maps.googleapis.com/maps/api/directions/json?'
 
-function directions(origin, destination, replyTo) {
+function directions(origin, destination, replyTo, messageFrom) {
 	
 	var query = 'origin=' + origin + '&destination=' + destination + '&key=' + API_KEY;
 	
@@ -33,7 +33,7 @@ function directions(origin, destination, replyTo) {
 			str += '\n';
 		}
 		console.log(str);
-		catapult.Message.create({from: "+12525130313", to: replyTo, text: str}, function(err, message){
+		catapult.Message.create({from: messageFrom, to: replyTo, text: str}, function(err, message){
 			if(err){
     			return console.error(err.message);
   			}
