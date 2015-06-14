@@ -60,7 +60,7 @@ app.post('/', function(req, response) {
 			console.log(keywordArray[i]);
 			if(keywordArray[i] == 'directions') {
 				console.log("Calling maps.directions");
-				maps.directions("Avent Ferry, Raleigh", keywordArray[i - 1]);
+				maps.directions(origin, keywordArray[i - 1]);
 			}
 			else if(keywordArray[i] == 'weather') {
 				console.log("Calling weather.getWeather");
