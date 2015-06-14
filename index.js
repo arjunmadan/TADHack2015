@@ -23,8 +23,6 @@ app.get('/', function(request, response) {
 	alchemy.keywords('Weather in raleigh', {}, function(err, res) {
   		if (err) throw err;
 
-
-		// See http://www.alchemyapi.com/api/concept/htmlc.html for format of returned object
 		keywords = res.keywords;
 		console.log(JSON.stringify(keywords));
   

@@ -15,7 +15,8 @@
     "googlemaps": "*",
     "request": "*",
     "node-bandwidth": "*",
-    "body-parser": "*"
+    "body-parser": "*",
+    "promise": "*"
   },
   "engines": {
     "node": "0.12.2"

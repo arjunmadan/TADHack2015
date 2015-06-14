@@ -11,12 +11,13 @@ function sendGETRequest(query){
 
 	request(url + query, function(error, response, body) {
           console.log(body);
+          text = JSON.parse(body);
+          console.log(text['query']['results']['channel']['item']['description']);
       });
 }
 
 function getWeather(text){
- 	
- 	var getQuery = "select item.condition from weather.forecast where woeid in";
+ 	var getQuery = "select * from weather.forecast where woeid in";
  	getQuery+= "(select woeid from geo.places(1) where text=\"";
  	getQuery+= text;
  	getQuery+="\")";
@@ -32,7 +33,7 @@ function getWeather(text){
 	console.log('Yahoo Weather Query: '+ yahooGetQuery);
 
 	sendGETRequest(yahooGetQuery); 
-	
+
 }
 
 exports.getWeather = getWeather;
