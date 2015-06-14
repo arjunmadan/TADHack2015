@@ -12,7 +12,7 @@ catapult.Client.globalOptions.userId = "u-m53dmzwgoxverwlyhah7wpa";
 function getAnswer(question, replyTo, messageFrom) {
 	question = question.split(']');
 	question = question[1];
-	question = 
+	//question = 
 	console.log("Question: " + question);
 	message = '';
 	Wolfram.query(question, function(err, result) {
